@@ -1,5 +1,6 @@
 use crate::prelude::*;
 mod map;
+mod map_builder;
 mod player;
 
 mod prelude {
