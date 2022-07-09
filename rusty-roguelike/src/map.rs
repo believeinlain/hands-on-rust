@@ -40,6 +40,9 @@ impl Map {
 pub fn in_bounds(p: Point) -> bool {
     p.x >= 0 && p.x < SCREEN_WIDTH && p.y >= 0 && p.y < SCREEN_HEIGHT
 }
+pub fn in_bounds_strict(p: Point) -> bool {
+    p.x > 0 && p.x < SCREEN_WIDTH-1 && p.y > 0 && p.y < SCREEN_HEIGHT-1
+}
 
 pub fn map_idx(x: i32, y: i32) -> usize {
     ((y * SCREEN_WIDTH) + x) as usize
